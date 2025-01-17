@@ -1,8 +1,18 @@
 # TSTO-Backup-API
-Request presaved TSTO Tokens, Avatars and Landfiles from TSTOLE.DE - for TSTO-Server Developers ONLY
+Request presaved TSTO Tokens, Avatars and Landfiles from TSTOLE.DE or friendPuller.exe - for TSTO-Server Developers ONLY
 
-To request a LandFile, you first need to obtain the original token using the email address:
+To request a LandFile from friendPuller Backups use the email address:
+Because we have multiple backup tool we first request the friendPuller Backups:
 
+https://tstole.de/newtool/api.php?puller=user@email.com
+
+if you get a bad response you can continue with the Tstole.de backup request, otherwise you'll receive the landfiles as zip.
+
+##########################################################################################################
+##########################################################################################################
+
+TSTOLE.de Backups:
+To request a LandFile from TSTOLE.DE, you first need to obtain the original token using the email address:
 https://tstole.de/newtool/api.php?gettoken=user@email.com
 
 If the token file is available, you will receive a JSON response like this:
@@ -21,6 +31,10 @@ If the file exists, you will receive a ZIP file in response, which contains the 
 The LandFile in various modes, the CurrencyFile, and the FriendListFile.
 Sample files can be found in the "Samples" folder.
 
+##########################################################################################################
+##########################################################################################################
+
+AVATARS Request:
 As a third option, you can also request the avatar:
 
 https://tstole.de/newtool/api.php?getAvatar=user@email.com
